@@ -52,13 +52,13 @@ html {
     content: '';
     display: block;
     width: 60px;
-    height: 1px;
+    height: 2px;
     margin: 24px auto;
-    background: #ccc
+	margin-bottom: 8px;
+    background: #f00;
 }
 .skills {
 	text-align: center;
-	margin-bottom: 4rem;
 	
 }
 .skills_heading {
@@ -74,9 +74,23 @@ html {
 	font-family: monospace
 }
 .skill_list span:not(:last-child):after {
-	content:' -'
-	
+	/*content:' -'*/
 }
+
+.skill_list span {
+	color: #000;
+    background: rgba(0,0,0,0.1);
+    border-radius: 16px;
+    padding: 4px 10px;
+	cursor: pointer;
+	transition: color, background 0.5s;
+}
+
+.skill_list span:hover{
+	color: #FFF;
+	background: #000;
+}
+
 .icon {
 	
 }
@@ -95,6 +109,11 @@ html {
 	text-align: center;
 	list-style: none;
 }
-.footer_soc span {
-	
+
+.footer_soc i {
+	transition: color 0.4s;
+}
+
+.footer_soc span:hover i {
+	color: #000 !important;
 }
